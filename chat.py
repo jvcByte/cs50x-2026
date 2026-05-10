@@ -2,8 +2,10 @@
 
 # client = OpenAI()
 
+# prompt input("Prompt: ")
+
 # response = client.response.create(
-#     input="In one sentence, what is CS50",
+#     input=prompt,
 #     model="gpt-5"
 # )
 
@@ -14,11 +16,12 @@
 
 
 import ollama
+prompt = input("Prompt: ")
 
 response = ollama.chat(
     model="llama3.2",
     messages=[
-        {"role": "user", "content": "In one sentence, what is CS50"}
+        {"role": "user", "content": prompt}
     ]
 )
 
