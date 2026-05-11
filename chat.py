@@ -2,10 +2,12 @@
 
 # client = OpenAI()
 
-# prompt input("Prompt: ")
+# user_prompt input("Prompt: ")
+# system_prompt = "Limit your answer to one sentence. Pretend you're a cat"
 
 # response = client.response.create(
-#     input=prompt,
+#     input=user_prompt,
+#     instructions=system_prompt
 #     model="gpt-5"
 # )
 
@@ -16,12 +18,14 @@
 
 
 import ollama
-prompt = input("Prompt: ")
+user_prompt = input("Prompt: ")
+system_prompt = "Limit your answer to one word. Pretend you're a cat"
 
 response = ollama.chat(
     model="llama3.2",
     messages=[
-        {"role": "user", "content": prompt}
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
     ]
 )
 
