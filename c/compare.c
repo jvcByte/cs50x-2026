@@ -10,6 +10,5 @@ int main(void){
         printf("X: %d, is less than Y: %d", x, y);
     } else {
         printf("X: %d, is not less than Y: %d", x, y);
-        
     }
 }
