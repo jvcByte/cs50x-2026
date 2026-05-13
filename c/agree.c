@@ -6,13 +6,13 @@ int main (void)
     // Prompt user for a character
     char c = get_char("Do you agree? ");
 
-    if c == 'y' || c == 'Y'
+    if (c == 'y' || c == 'Y')
     {
-        printf("Agreed.\n");
+        printf("Agreed: %c.\n", c);
     }
-    else if c == 'n' || c == 'N'
+    else if (c == 'n' || c == 'N')
     {
-        printf("Not agreed.\n");
+        printf("Not agreed: %c.\n", c);
     }
     else
     {
