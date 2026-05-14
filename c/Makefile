@@ -15,5 +15,6 @@ clean:
 	rm -f hello
 	rm -f agree
 	rm -f cat
+	rm -f mario
 
 .PHONY: clean
