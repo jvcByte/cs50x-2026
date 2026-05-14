@@ -12,9 +12,6 @@ cat: cat.c
 	$(CC) $(CFLAGS) cat.c -o cat $(LDLIBS)
 
 clean:
-	rm -f hello
-	rm -f agree
-	rm -f cat
-	rm -f mario
+	rm -f hello mario agree cat calculator overflow
 
 .PHONY: clean
